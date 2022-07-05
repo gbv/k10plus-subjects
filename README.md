@@ -4,7 +4,7 @@ This directory contains scripts to analyze subject indexing in K10plus catalogue
 
 ## Requirements
 
-Analysis is based on a PICA+ dump in [PICA Normalized] format (one record per line). Dumps can be found at <https://analytics.gbv.de/dumps/kxp/>. The should include the following fields:
+Analysis is based on a PICA+ dump in [PICA Normalized](https://format.gbv.de/pica/normalized) format (one record per line). Dumps can be found at <https://analytics.gbv.de/dumps/kxp/>. The should include the following fields:
 
 - `003` PPN for each record
 - `044.`, `045.` all subject fields
