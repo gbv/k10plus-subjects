@@ -4,7 +4,15 @@ This directory contains scripts to analyze subject indexing in K10plus catalogue
 
 ## Requirements
 
-Analysis is based on a PICA+ dump in [PICA Normalized] format (one record per line). Dumps can be found at <https://analytics.gbv.de/dumps/kxp/>. Data extraction from PICA+ requires [pica-rs](https://github.com/deutsche-nationalbibliothek/pica-rs) to be installed.
+Analysis is based on a PICA+ dump in [PICA Normalized] format (one record per line). Dumps can be found at <https://analytics.gbv.de/dumps/kxp/>. The should include the following fields:
+
+- `003` PPN for each record
+- `044.`, `045.` all subject fields
+- `144Z`, `145S`, `145Z` (optional, not analyzed yet)
+
+Fields with classifications should include subfields `$a` (possible expanded from PPN-Link in `$9`) and `$A` (if available). In particular BK (`045Q/01`) and RVK (`045R`) need notation in `$a` also if the internal records only contains `$9`.
+
+Data extraction from PICA+ requires [pica-rs](https://github.com/deutsche-nationalbibliothek/pica-rs) to be installed.
 
 ## Examples: RVK and BK
 
