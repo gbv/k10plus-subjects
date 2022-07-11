@@ -4,13 +4,13 @@ This directory contains scripts to analyze subject indexing in K10plus catalog.
 
 ## Requirements
 
-Dumps of subject indexing in K10plus catalog are published yearly to quarterly at <https://doi.org/10.5281/zenodo.6810556>. Each dump is around 15 Gigabytes and split into multiple files. Copies of the full dump may be found at <https://analytics.gbv.de/dumps/kxp/>.
+Dumps of subject indexing in K10plus catalog are published yearly to quarterly at <https://doi.org/10.5281/zenodo.6817455>. Each dump is around 15 Gigabytes and split into multiple files. Copies of the full dump may be found at <https://analytics.gbv.de/dumps/kxp/>.
 
 Data is provided in [PICA Normalized](https://format.gbv.de/pica/normalized) format with one record per line. Further extraction and analysis of PICA Normalized requires [pica-rs](https://github.com/deutsche-nationalbibliothek/pica-rs) and Perl to be installed.
 
 ## Scope
 
-The data is reduced to data fields used for subject indexing in K10plus catalog and limited to records with at least one library holding. Records without any subject indexing are omitted. See the file README.md of <https://doi.org/10.5281/zenodo.6810556> for further description of the data.
+The data is reduced to data fields used for subject indexing in K10plus catalog and limited to records with at least one library holding. Records without any subject indexing are omitted. See the file README.md of <https://doi.org/10.5281/zenodo.6817455> for further description of the data.
 
 ## Analysis of classification
 
