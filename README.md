@@ -6,6 +6,8 @@ This directory contains scripts to analyze subject indexing in K10plus catalog.
 
 Dumps of subject indexing in K10plus catalog are published yearly to quarterly at <https://doi.org/10.5281/zenodo.6817455>. Each dump is around 15 Gigabytes and split into multiple files. Copies of the full dump may be found at <https://analytics.gbv.de/dumps/kxp/>.
 
+Script `zenodo-get` in this repository can be used for automatic download from Zenodo.
+
 Data is provided in [PICA Normalized](https://format.gbv.de/pica/normalized) format with one record per line. Further extraction and analysis of PICA Normalized requires [pica-rs](https://github.com/deutsche-nationalbibliothek/pica-rs) and Bash to be installed.
 
 ## Scope
