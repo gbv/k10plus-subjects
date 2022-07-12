@@ -20,9 +20,9 @@ Complete analysis depends on the fields to be analysed. The following analysis i
 
 File `classifications.csv` contains a list of classifications, each with the corresponding PICA field. See <https://format.k10plus.de/k10plushelp.pl?cmd=pplist&katalog=Standard#titel> for documentation of PICA fields.
 
-Script `extract-classification.pl` helps to extract classification data from PICA to TSV format, e.g.
+Script `extract-classification.sh` helps to extract classification data from PICA to TSV format, e.g.
 
-    cat kxp-subjects-sample_2021-06-30*.dat | ./extract-classification.pl rvk
+    cat kxp-subjects-sample_2021-06-30*.dat | ./extract-classification.sh rvk
 
 The resulting TSV files contains three columns:
 
