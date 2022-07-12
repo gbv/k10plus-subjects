@@ -10,6 +10,6 @@ my $field = $classifications{$voc};
 die "Usage: $0 " . join( '|', keys %classifications ) . "\n" if !$field;
 
 system(
-"pica filter '003@? && $field.a?' --reduce '003@,$field' | pica select '003@.0,$field\{a,A}' --tsv > $voc.tsv"
+"pica filter '003@? && $field.a?' | pica select '003@.0,$field\{a,A}' --tsv > $voc.tsv"
 );
 say `wc -l $voc.tsv`;
