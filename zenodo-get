@@ -17,8 +17,8 @@ fi
 
 if [[ ! "$ID" =~ ^[0-9]+$ ]]; then
     echo "Usage: $0 [-d] DOI|URL|ID"
-    echo "Download all files from a publication at Zenodo.org."
-    echo "Option -d will actually download, otherwise just list files."
+    echo "Download all files from a publication at Zenodo.org. List files by default."
+    echo "Option -d actually downloads, continuing partial downloads."
     exit 1
 fi
 
@@ -28,6 +28,6 @@ curl -sL "https://zenodo.org/api/records/$ID" | jq -r '.files|map([.key,.links.s
         echo -e "$url\t$file"    
     else
         echo "$file"
-        wget -N "$url"
+        wget -cN "$url"
     fi
 done 
