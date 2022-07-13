@@ -2,8 +2,7 @@
 CREATE TABLE IF NOT EXISTS subjects (
   ppn TEXT NOT NULL,
   voc TEXT NOT NULL,
-  notation TEXT NOT NULL,
-  UNIQUE(ppn, voc, notation) ON CONFLICT IGNORE
+  notation TEXT NOT NULL
 );
 
 .mode tabs
