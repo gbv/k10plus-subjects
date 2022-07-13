@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-
+#
+# Download all files from a publication at Zenodo.org.
+# Spaces in filenames are not supported.
+# Requires bash, curl and jq.
+#
 set -e
 
 if [[ "$1" == "-d" ]]; then
