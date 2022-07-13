@@ -65,5 +65,4 @@ Then run your queries in SQLite, e.g.:
 
 If both rvk and bk have been imported co-occurrences can be queried via JOIN:
 
-    SELECT b.notation, count(*) AS freq FROM subjects AS b JOIN subjects AS a ON a.ppn=b.ppn WHERE a.voc="rvk" AND b.voc="bk" AND a.notation="NQ 2350" GROUP BY b.notation ORDER BY freq;
-
+    SELECT b.notation, count(*) AS freq FROM subjects AS b JOIN subjects AS a ON a.ppn=b.ppn WHERE a.voc="rvk" AND b.voc="bk" AND a.notation="NQ 2350" GROUP BY b.notation ORDER BY freq DESC LIMIT 10;
