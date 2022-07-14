@@ -18,6 +18,8 @@ The data is reduced to data fields used for subject indexing in K10plus catalog 
 
 Complete analysis depends on the fields to be analysed. The following analysis is limited to classification data.
 
+### Extract raw indexing for each classification
+
 File `classifications.csv` contains a list of classifications, each with the corresponding PICA field. See <https://format.k10plus.de/k10plushelp.pl?cmd=pplist&katalog=Standard#titel> for documentation of PICA fields.
 
 Script `extract-classification.sh` helps to extract classification data from PICA to TSV format, e.g.
@@ -44,9 +46,15 @@ Basic analysis can be done on the command line, e.g. with `wc -l`, `uniq`, `awk`
     wc -l *.tsv
     awk -F'\t' '$3{print $3}' bk.tsv | grep -v https | sort | uniq -c
 
-If not interested in sources (`$A`), reduce the data to PPN, vocabulary and notation:
+The data can also be used to detect cataloging errors such as invalid and repeated notations etc.
+
+### Cleanup and reduce indexing data
+
+If not interested in sources (`$A`) and details of cataloging, reduce the data to PPN, vocabulary and notation:
 
     ./classification-subjects.sh > subjects.tsv
+
+*This step still needs to be extended by cleanup of invalid notations (<https://github.com/gbv/k10plus-subjects/issues/2>)*
 
 The file `subjects.tsv` contains three columns
 
@@ -66,3 +74,4 @@ Then run your queries in SQLite, e.g.:
 If both rvk and bk have been imported co-occurrences can be queried via JOIN:
 
     SELECT b.notation, count(*) AS freq FROM subjects AS b JOIN subjects AS a ON a.ppn=b.ppn WHERE a.voc="rvk" AND b.voc="bk" AND a.notation="NQ 2350" GROUP BY b.notation ORDER BY freq DESC LIMIT 10;
+
