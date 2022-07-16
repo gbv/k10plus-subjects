@@ -52,9 +52,9 @@ The data can also be used to detect cataloging errors such as invalid and repeat
 
 If not interested in sources (`$A`) and details of cataloging, reduce the data to PPN, vocabulary and notation:
 
-    ./classification-subjects.sh > subjects.tsv
+    ./classification-subjects.pl > subjects.tsv
 
-*This step still needs to be extended by cleanup of invalid notations (<https://github.com/gbv/k10plus-subjects/issues/2>)*
+Invalid notations are emitted to STDERR, add `2>/dev/null` for silence.
 
 The file `subjects.tsv` contains three columns
 
