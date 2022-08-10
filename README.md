@@ -48,7 +48,7 @@ Basic analysis can be done on the command line, e.g. with `wc -l`, `uniq`, `awk`
 
 The data can also be used to detect cataloging errors such as invalid and repeated notations etc.
 
-### Cleanup and reduce indexing data
+### Reduce extracted indexing data
 
 If not interested in sources (`$A`) and details of cataloging, reduce the data to PPN, vocabulary and notation:
 
