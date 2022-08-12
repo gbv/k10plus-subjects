@@ -1,17 +1,10 @@
-#!/usr/bin/env perl
+package FixPica;
+
 use v5.14;
 use PICA::Data ':all';
 
-# Remove letter in front of DDC notation
-
-replace_non_repeated_subfield(
-    '045F$a',
-    sub {
-        my ( $field, $value ) = @_;
-        return if $value !~ qr{^[a-z][0-9.'/]+$};
-        return substr $value, 1;
-    }
-);
+use base 'Exporter';
+our @EXPORT = qw(replace_non_repeated_subfield);
 
 # generic
 sub replace_non_repeated_subfield {
@@ -48,3 +41,5 @@ sub replace_non_repeated_subfield {
         $writer->write( [ $ppn->[0], @changes ] ) if @changes;
     }
 }
+
+1;
