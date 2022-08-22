@@ -8,4 +8,4 @@ CREATE INDEX idx_notation on subjects (notation);
 CREATE INDEX idx_ppn on subjects (ppn);
 
 .mode tabs
-.import subjects.tsv subjects
+.import reduced-subjects.tsv subjects

@@ -22,6 +22,8 @@ Script `extract-subjects.pl` extracts indexing data from PICA to TSV format, e.g
 
     cat kxp-subjects-sample_2021-06-30*.dat | ./extract-subjects.pl > subjects.tsv
 
+This should take around half an hour at most.
+
 The resulting TSV files contains three columns:
 
 - PPN
@@ -47,15 +49,13 @@ The data can also be used to detect cataloging errors such as invalid notations 
 
 ### Reduce extracted indexing data
 
-*The following only supports a limited number of vocabularies!*
+If not interested in sources (`$A`) and details of cataloging, reduce the data to PPN, vocabulary and notation. Vocabularies without `notationPattern` in `vocabularies.json` are ignored.
 
-If not interested in sources (`$A`) and details of cataloging, reduce the data to PPN, vocabulary and notation:
-
-    ./classification-subjects.pl > subjects.tsv
+    subjects.tsv < ./reduce-subjects.pl > reduced-subjects.tsv
 
 Invalid notations are emitted to STDERR, add `2>/dev/null` for silence.
 
-The file `subjects.tsv` contains three columns
+The file `reduced-subjects.tsv` contains three columns
 
 - PPN
 - Vocabulary (e.g. `rvk`)
