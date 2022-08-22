@@ -51,11 +51,11 @@ The data can also be used to detect cataloging errors such as invalid notations 
 
 If not interested in sources (`$A`) and details of cataloging, reduce the data to PPN, vocabulary and notation. Vocabularies without `notationPattern` in `vocabularies.json` are ignored.
 
-    <subjects.tsv ./reduce-subjects.pl >reduced-subjects.tsv
+    <subjects.tsv ./clean-subjects.pl >clean-subjects.tsv
 
 Invalid notations are emitted to STDERR, add `2>/dev/null` for silence.
 
-The file `reduced-subjects.tsv` contains three columns
+The file `clean-subjects.tsv` contains three columns
 
 - PPN
 - Vocabulary (e.g. `rvk`)
