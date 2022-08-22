@@ -8,29 +8,29 @@ Dumps of subject indexing in K10plus catalog are published yearly to quarterly a
 
 Script `zenodo-get` in this repository can be used for automatic download from Zenodo.
 
-Data is provided in [PICA Normalized](https://format.gbv.de/pica/normalized) format with one record per line. Further extraction and analysis of PICA Normalized requires [pica-rs](https://github.com/deutsche-nationalbibliothek/pica-rs) and Bash to be installed.
+Data is provided in [PICA Normalized](https://format.gbv.de/pica/normalized) format with one record per line. Further extraction and analysis of PICA Normalized requires [pica-rs](https://github.com/deutsche-nationalbibliothek/pica-rs), Bash and Perl to be installed.
 
 ## Scope
 
 The data is reduced to data fields used for subject indexing in K10plus catalog and limited to records with at least one library holding. Records without any subject indexing are omitted. See the file README.md of <https://doi.org/10.5281/zenodo.6817455> for further description of the data.
 
-## Analysis of classification
+## Extract raw indexing for each vocabulary
 
-Complete analysis depends on the fields to be analysed. The following analysis is limited to classification data.
+See <https://format.k10plus.de/k10plushelp.pl?cmd=pplist&katalog=Standard#titel> for documentation of PICA fields.
 
-### Extract raw indexing for each classification
+Script `extract-subjects.pl` extracts indexing data from PICA to TSV format, e.g.
 
-File `classifications.csv` contains a list of classifications, each with the corresponding PICA field. See <https://format.k10plus.de/k10plushelp.pl?cmd=pplist&katalog=Standard#titel> for documentation of PICA fields.
-
-Script `extract-classification.sh` helps to extract classification data from PICA to TSV format, e.g.
-
-    cat kxp-subjects-sample_2021-06-30*.dat | ./extract-classification.sh rvk
+    cat kxp-subjects-sample_2021-06-30*.dat | ./extract-subjects.pl > subjects.tsv
 
 The resulting TSV files contains three columns:
 
 - PPN
 - notation (subfield `$a`)
 - source (subfield `$A` if available)
+
+Multiple sources are concatenated with separator `|`. 
+
+**Note:** Use of sources field (`$A` in most cases) contains a large number of errors when the label of a concept was put in the sources field by accident!
 
 Repeated subfield result in repeated rows. An example:
 
@@ -41,14 +41,13 @@ Repeated subfield result in repeated rows. An example:
 160684654X	NZ 79700	DA3
 ~~~
 
-Basic analysis can be done on the command line, e.g. with `wc -l`, `uniq`, `awk`...:
+Basic analysis can be done on the command line, e.g. with `wc -l`, `uniq`, `awk`...
 
-    wc -l *.tsv
-    awk -F'\t' '$3{print $3}' bk.tsv | grep -v https | sort | uniq -c
-
-The data can also be used to detect cataloging errors such as invalid and repeated notations etc.
+The data can also be used to detect cataloging errors such as invalid notations etc.
 
 ### Reduce extracted indexing data
+
+*The following only supports a limited number of vocabularies!*
 
 If not interested in sources (`$A`) and details of cataloging, reduce the data to PPN, vocabulary and notation:
 
