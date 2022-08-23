@@ -76,7 +76,7 @@ If both rvk and bk have been imported co-occurrences can be queried via JOIN:
 
 ### Transform reduced indexing data to RDF
 
-Scipt `triples.pl` transforms `clean-subjects.tsv` to `k10plus-subjects.nt.gz`:
+Scipt `triples.pl` transforms `clean-subjects.tsv` to `kxp-subjects.nt.gz`:
 
     make rdf
 
