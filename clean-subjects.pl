@@ -4,11 +4,9 @@ use JSON::PP;
 
 # notation patterns for validation
 my %patterns =
-  map  { ( $_->{VOC}, qr{^$_->{notationPattern}$} ) }
-  grep { $_->{notationPattern} } @{
-    decode_json(
-        do { local ( @ARGV, $/ ) = 'vocabularies.json'; <> }
-    )
+  map  { $_->{VOC} => qr{^$_->{notationPattern}$} }
+  grep { $_->{notationPattern} }
+  @{ decode_json do { local ( @ARGV, $/ ) = 'vocabularies.json'; <> }
   };
 
 # additional cleanup rules
@@ -24,8 +22,6 @@ my ( $ppn, %seen );
 while (<>) {
     my ( $id, $voc, $notation ) = split "\t", $_;    # ignore sources
     my $pattern = $patterns{$voc} or next;    # ignore vocs without pattern
-
-    #my $ppn = $id;
 
     # cleanup and filter notations
     $notation =~ s/^\s|\s+$//g;

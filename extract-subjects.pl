@@ -4,10 +4,8 @@ use JSON::PP;
 
 # load extraction rules
 my %map =
-  map { ( $_->{PICA}, [ $_->{VOC}, qr{$_->{ID}}, qr{$_->{SRC}} ] ) } @{
-    decode_json(
-        do { local ( @ARGV, $/ ) = 'vocabularies.json'; <> }
-    )
+  map { $_->{PICA} => [ $_->{VOC}, qr{$_->{ID}}, qr{$_->{SRC}} ] }
+  @{ decode_json do { local ( @ARGV, $/ ) = 'vocabularies.json'; <> }
   };
 
 # read normalized PICA+ (one record per line)
