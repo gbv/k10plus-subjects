@@ -60,7 +60,7 @@ See `vocabularies.json` for mapping of vocabulary symbol to BARTOC URI and addit
 The NTriples file contains RDF triples with a subset of the information given in the TSV file. Only vocabularies with known mapping to RDF are included. An example:
 
     <http://uri.gbv.de/document/opac-de-627:ppn:0010000011> <http://purl.org/dc/terms/subject> <http://d-nb.info/gnd/4036582-7> .
-<http://uri.gbv.de/document/opac-de-627:ppn:0010000011> <http://purl.org/dc/terms/subject> <http://uri.gbv.de/terminology/bk/58.55> .
+    <http://uri.gbv.de/document/opac-de-627:ppn:0010000011> <http://purl.org/dc/terms/subject> <http://uri.gbv.de/terminology/bk/58.55> .
 
 ## License and provenance
 

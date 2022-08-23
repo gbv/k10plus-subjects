@@ -1,10 +1,18 @@
 # K10plus Subjects
 
-This directory contains scripts to analyze subject indexing in K10plus catalog.
+This directory contains scripts analyze, convert and publish subject indexing data from K10plus catalog.
+
+## Summary
+
+The data is reduced and cleaned up in three steps:
+
+1. Full K10plus dumps (PICA+): not published
+2. Reduction to subject-related fields (TSV): <https://doi.org/10.5281/zenodo.6817455>
+3. Normalized subject indexing data (TSV and RDF): <https://doi.org/10.5281/zenodo.7016625>
 
 ## Requirements
 
-Dumps of subject indexing in K10plus catalog are published yearly to quarterly at <https://doi.org/10.5281/zenodo.6817455>. Each dump is around 15 Gigabytes and split into multiple files. Copies of the full dump may be found at <https://analytics.gbv.de/dumps/kxp/>.
+Dumps of subject indexing in K10plus catalog are published yearly to quarterly at . Each dump is around 15 Gigabytes and split into multiple files. Copies of the full dump may be found at <https://analytics.gbv.de/dumps/kxp/>.
 
 Script `zenodo-get` in this repository can be used for automatic download from Zenodo.
 
