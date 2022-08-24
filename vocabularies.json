@@ -45,6 +45,7 @@
     "SRC": "^A(.+)",
     "notationPattern": "[A-Z]( [0-9]+(.?[0-9])?)?",
     "VOC": "kab",
+    "namespace": "http://uri.gbv.de/terminology/kab/",
     "prefLabel": { "de": "Klassifikation für Allgemeinbibliotheken", "en": "Classification for general libraries" }, 
     "uri": "http://bartoc.org/en/node/1031"
   },

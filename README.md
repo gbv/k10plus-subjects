@@ -7,8 +7,8 @@ This directory contains scripts analyze, convert and publish subject indexing da
 The data is reduced and cleaned up in three steps:
 
 1. Full K10plus dumps (PICA+): not published
-2. Reduction to subject-related fields (TSV): <https://doi.org/10.5281/zenodo.6817455>
-3. Normalized subject indexing data (TSV and RDF): <https://doi.org/10.5281/zenodo.7016625>
+2. Subject-related fields (TSV): <https://doi.org/10.5281/zenodo.6817455>
+3. Syntactically valid identifiers of known vocabularies (TSV and RDF): <https://doi.org/10.5281/zenodo.7016625>
 
 ## Requirements
 
