@@ -8,7 +8,7 @@ The data is reduced and cleaned up in three steps:
 
 1. Full K10plus dumps (PICA+): not published
 2. Subject-related fields (TSV): <https://doi.org/10.5281/zenodo.6817455>
-3. Syntactically valid identifiers of known vocabularies (TSV and RDF): <https://doi.org/10.5281/zenodo.7016625>
+3. Syntactically valid identifiers of known vocabularies (TSV and RDF): <https://doi.org/10.5281/zenodo.7018350>
 
 ## Requirements
 

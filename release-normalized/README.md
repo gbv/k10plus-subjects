@@ -28,24 +28,24 @@ See `vocabularies.json` for mapping of vocabulary symbol to BARTOC URI and addit
 
 **Statistics**
 
-The TSV dataset is 2,709,105 records and 8,092,166 links to concepts.
+The TSV dataset is 24,009,936 records and 82,937,252 links to concepts.
 
 Number of concepts per vocabulary:
 
-    ssd	       61
-    asb	      582
-    kab	      703
-    stw	     3098
-    nlm	    21880
-    sfb	   138236
-    lcc	   641778
-    sdnb	   648079
-    rvk	   939195
-    ddc	   979919
-    bk	  1836475
-    gnd	  2882160
+    asb	     5340
+    stw	   104118
+    nlm	   129289
+    ssd	   153242
+    kab	   159543
+    sfb	   432141
+    sdnb	  4593798
+    lcc	  5232208
+    ddc	  9248794
+    rvk	 10172838
+    bk	 13321229
+    gnd	 39384712
 
-Number of RDF Triples:  8,092,166
+Number of RDF Triples:  82,937,252
 
 **TSV**
 
@@ -68,6 +68,11 @@ The NTriples file contains the same information as given in TSV file but identif
 
     <http://uri.gbv.de/document/opac-de-627:ppn:0010000011> <http://purl.org/dc/terms/subject> <http://d-nb.info/gnd/4036582-7> .
     <http://uri.gbv.de/document/opac-de-627:ppn:0010000011> <http://purl.org/dc/terms/subject> <http://uri.gbv.de/terminology/bk/58.55> .
+
+**Changelog**
+
+- 2022-08-24: Fixed GND URIs, added LCC and KAB (<https://doi.org/10.5281/zenodo.7018350>)
+- 2022-08-24: First version (<https://doi.org/10.5281/zenodo.7016626>)
 
 **License and provenance**
 
