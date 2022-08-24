@@ -4,8 +4,9 @@
     "PICA": "045A",
     "SRC": "^A(.+)",
     "VOC": "lcc",
-    "lcc": "[A-Z]+[0-9]+(.[0-9]+)?(.[A-Z0-9]+(.[0-9]+))",
+    "notationPattern": "[A-Z]{1,3}([0-9]+(\\.[0-9]+)?( *\\.?[A-Z]{0,3}[0-9]*([ -]\\.?[A-Z]{0,3}[0-9]+)?)?( *[0-9]+[a-z]*)?)?",
     "namespace": "http://id.loc.gov/authorities/classification/",
+    "prefLabel": { "en": "Library of Congress Classification" },
     "uri": "http://bartoc.org/en/node/486"
   },
   {
@@ -15,6 +16,7 @@
     "VOC": "asb",
     "namespace": "http://uri.gbv.de/terminology/asb/",
     "notationPattern": "[A-Z]+( [0-9]+)",
+    "prefLabel": { "de": "Allgemeine Systematik für Öffentliche Bibliotheken", "en": "General Systematic for Public Libraries" },
     "uri": "http://bartoc.org/en/node/732"
   },
   {
@@ -42,7 +44,9 @@
     "PICA": "045B/03",
     "SRC": "^A(.+)",
     "notationPattern": "[A-Z]( [0-9]+(.?[0-9])?)?",
-    "VOC": "kab"
+    "VOC": "kab",
+    "prefLabel": { "de": "Klassifikation für Allgemeinbibliotheken", "en": "Classification for general libraries" }, 
+    "uri": "http://bartoc.org/en/node/1031"
   },
   {
     "ID": "^a(.+)",
@@ -101,7 +105,7 @@
     "PICA": "044K",
     "SRC": "^A(.+)",
     "VOC": "gnd",
-    "namespace": "http://d-nb.info/gnd/",
+    "namespace": "https://d-nb.info/gnd/",
     "notationPattern": "[0-9X]+(-[0-9X])?", 
     "notationPattern": "[0-9]+(-[0-9])?", 
     "prefLabel": { "de": "Gemeinsame Normdatei", "en": "Integrated Authority File" },
@@ -112,7 +116,7 @@
     "PICA": "044L",
     "SRC": "^[kvA](.+)",
     "VOC": "gnd",
-    "namespace": "http://d-nb.info/gnd/",
+    "namespace": "https://d-nb.info/gnd/",
     "notationPattern": "[0-9X]+(-[0-9X])?", 
     "prefLabel": { "de": "Gemeinsame Normdatei", "en": "Integrated Authority File" },
     "uri": "http://bartoc.org/en/node/430"
