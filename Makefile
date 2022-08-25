@@ -1,7 +1,7 @@
 default:
 	@echo See README.md
 	
-all: tsv rdf
+normalized: tsv rdf
 
 clean-subjects.tsv: subjects.tsv
 	./clean-subjects.pl < $< > $@ 2> invalid-ids.tsv
@@ -14,5 +14,5 @@ tsv: kxp-subjects.tsv.gz
 kxp-subjects.tsv.gz: clean-subjects.tsv
 	gzip -c $< > $@
 
-stats: all
+stats: normalized
 	./stats.sh
