@@ -80,5 +80,5 @@ All data is public domain but references are welcome. See <https://coli-conc.gbv
 
 The data has been derived from a larger datase of all subject indexing data, published at <https://doi.org/10.5281/zenodo.6817455>. 
 
-This dataset has been created with public scripts from git repository <https://github.com/gbv/k10plus-subjects>.
+This dataset has been created with public scripts from git repository <https://github.com/gbv/k10plus-subjects>. [Comments and feature requests](https://github.com/gbv/k10plus-subjects/issues) are welcome!
 
