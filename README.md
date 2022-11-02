@@ -6,10 +6,14 @@ This repository contains scripts to analyze, convert and publish subject indexin
 
 The data is reduced and cleaned up in four sets:
 
-1. Full K10plus dumps (PICA+): *not published so far*
-2. Subject-related fields (PICA+): <https://doi.org/10.5281/zenodo.6817455> 
-3. Vocabularies, identifier, and sources: *not published so far*
-4. Syntactically valid identifiers of known vocabularies (TSV and RDF): <https://doi.org/10.5281/zenodo.7018350> (aka normalized subject indexing data)
+1. Full K10plus dumps (PICA+):
+   *not published so far*
+2. Subject-related fields (PICA+):
+   <https://doi.org/10.5281/zenodo.6817455> 
+3. Vocabularies, identifier, and sources:
+   *not published so far*
+4. Syntactically valid identifiers of known vocabularies, aka normalized subject indexing data (TSV and RDF):
+   <https://doi.org/10.5281/zenodo.7018350>
 
 If not interested in sources and details of cataloging, best use the set 4. For the full picture use set 2.
 
@@ -33,7 +37,7 @@ See `Makefile` for execution.
 
 ## Obtaining the data
 
-Dumps of subject indexing in K10plus catalog are published yearly to quarterly at . Each dump is around 15 Gigabytes and split into multiple files. Copies of the full dump *may* be found at <https://analytics.gbv.de/dumps/kxp/>. Data is provided in [PICA Normalized](https://format.gbv.de/pica/normalized) format with one record per line. 
+Dumps of subject indexing in K10plus catalog are published yearly to quarterly. Each dump is around 15 Gigabytes (that's around 10% of full K10plus data) and split into multiple files. Copies of the full dump *may* be found at <https://analytics.gbv.de/dumps/kxp/>. Data is provided in [PICA Normalized](https://format.gbv.de/pica/normalized) format with one record per line. 
 
 The data is reduced to data fields used for subject indexing in K10plus catalog and limited to records with at least one library holding. Records without any subject indexing are omitted. See [K10plus format documentation](https://format.k10plus.de/k10plushelp.pl?cmd=pplist&katalog=Standard#titel) and file README.md of the data publication for details.
 
