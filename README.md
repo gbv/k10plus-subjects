@@ -19,7 +19,7 @@ If not interested in sources and details of cataloging, best use the set 4. For 
 
 ## Implementation
 
-Requires [pica-rs](https://github.com/deutsche-nationalbibliothek/pica-rs), Bash and Perl to be installed.
+Requires [pica-rs](https://github.com/deutsche-nationalbibliothek/pica-rs) >= 0.13.0, Bash and Perl to be installed.
 
 - Processing from set 1 to 2 is implemented in `extract-subject-fields.sh`.
 
