@@ -2,6 +2,10 @@
 use v5.14.1;
 use JSON::PP;
 
+# Ensure UTF-8 data is and stays UTF-8
+binmode( STDIN,  ":encoding(utf8)" );
+binmode( STDOUT, ":encoding(utf8)" );
+
 # notation patterns for validation
 my %patterns =
   map  { $_->{VOC} => qr{^$_->{notationPattern}$} }
