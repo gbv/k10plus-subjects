@@ -1,7 +1,8 @@
 #!/bin/bash
 
-TSV=kxp-subjects.tsv.gz
-RDF=kxp-subjects.nt.gz
+DIR=${1:-.}
+TSV=$DIR/kxp-subjects.tsv.gz
+RDF=$DIR/kxp-subjects.nt.gz
 
 num() {
     LC_NUMERIC="en_US.UTF-8"
