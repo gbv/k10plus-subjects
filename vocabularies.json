@@ -103,7 +103,7 @@
   },
   {
     "ID": "^7gnd/(.+)",
-    "PICA": "044K/00-99|044L/00-99",
+    "PICA": "044K/00-99 044L/00-99",
     "SRC": "^[kvA](.+)",
     "VOC": "gnd",
     "namespace": "https://d-nb.info/gnd/",

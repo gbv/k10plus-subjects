@@ -25,8 +25,8 @@ while (<>) {
         }
 
         # handle occurrence ranges
-        if ( $field =~ qr{^(044[KL])/} ) {    # GND 044[KL]/00-99
-            $field = '044K/00-99|044L/00-99';
+        if ( $field =~ qr{^(044[KL])} ) {    # GND 044[KL]/00-99
+            $field = '044K/00-99 044L/00-99';
         }
         elsif ( $field =~ qr{^045D/(..)} && $1 <= 48 ) {    # STW 045D/00-48
             $field = '045D/00-48';
