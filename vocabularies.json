@@ -15,7 +15,7 @@
     "SRC": "^A(.+)",
     "VOC": "asb",
     "namespace": "http://uri.gbv.de/terminology/asb/",
-    "notationPattern": "[A-Z]+( [0-9]+)",
+    "notationPattern": "[A-Z][a-z]*( [0-9]+)?",
     "prefLabel": { "de": "Allgemeine Systematik für Öffentliche Bibliotheken", "en": "General Systematic for Public Libraries" },
     "uri": "http://bartoc.org/en/node/732"
   },
