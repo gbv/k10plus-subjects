@@ -35,7 +35,7 @@
     "SRC": "^A(.+)",
     "VOC": "sfb",
     "namespace": "http://uri.gbv.de/terminology/sfb/",
-    "notationPattern": "[A-Z]+ [0-9]+(.[0-9]| [A-Z] - [A-Z])?",
+    "notationPattern": "[A-Z][A-Za-zä]* [0-9]+(.[0-9]| [A-Z] - [A-Z])?",
     "prefLabel": { "de": "Systematik für Bibliotheken" },
     "uri": "http://bartoc.org/en/node/335"
   },
