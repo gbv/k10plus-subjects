@@ -16,3 +16,6 @@ kxp-subjects.tsv.gz: clean-subjects.tsv
 
 stats: normalized
 	./stats.sh
+
+model.svg: model.mmd
+	npm run mmdc -- -i $< -o $@ 
