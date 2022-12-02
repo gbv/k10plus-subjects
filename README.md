@@ -9,7 +9,7 @@ The data is reduced and cleaned up in four sets:
 1. Full K10plus dumps (PICA+):
    *not published so far*
 2. Subject-related fields (PICA+):
-   <https://doi.org/10.5281/zenodo.6817455> 
+   <https://doi.org/10.5281/zenodo.6810555> 
 3. Vocabularies, identifier, and sources:
    *not published so far*
 4. Syntactically valid identifiers of known vocabularies, aka normalized subject indexing data (TSV and RDF):
