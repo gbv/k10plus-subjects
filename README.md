@@ -13,7 +13,7 @@ The data is reduced and cleaned up in four sets:
 3. Vocabularies, identifier, and sources:
    *not published so far*
 4. Syntactically valid identifiers of known vocabularies, aka normalized subject indexing data (TSV and RDF):
-   <https://doi.org/10.5281/zenodo.7018350>
+   <https://doi.org/10.5281/zenodo.7016625>
 
 If not interested in sources and details of cataloging, best use the set 4. For the full picture use set 2.
 
