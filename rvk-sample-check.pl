@@ -14,10 +14,11 @@ sub infer {
         my %query = (
             fromScheme => "http://bartoc.org/en/node/533",
             toScheme   => "http://bartoc.org/en/node/18785",
+            from       => $rvk,
             partOf     => "any",
             strict     => 1,
-            from       => $rvk,
-            type       => "http://www.w3.org/2004/02/skos/core#narrowMatch"
+            type       =>
+"http://www.w3.org/2004/02/skos/core#narrowMatch|http://www.w3.org/2004/02/skos/core#narrowMatch"
         );
         my $url = "https://coli-conc.gbv.de/api/mappings/infer?" . join '&',
           map { "$_=" . uri_escape( $query{$_} ) } sort keys %query;
