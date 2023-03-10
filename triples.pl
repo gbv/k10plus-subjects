@@ -29,10 +29,6 @@ while (<>) {
     }
 
     say "<$kxpNamespace$ppn> <http://purl.org/dc/terms/subject> <$uri> .";
+    say "<$uri> <http://www.w3.org/2004/02/skos/core#inScheme> <"
+      . $voc->{uri} . "> .";
 }
-
-__END__
-
-Uses dct:subject
-
-https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject
