@@ -14,6 +14,7 @@ my %vocs =
 while (<>) {
     chomp;
     my ( $ppn, $voc, $id ) = split "\t";
+    $voc = $vocs{$voc} or next;
 
     # uriFromNotation
     my $uri;
@@ -23,7 +24,6 @@ while (<>) {
         $uri = "http://dewey.info/class/" . uri_escape($id) . "/e23/";
     }
     else {
-        $voc = $vocs{$voc} or next;
         my $namespace = $voc->{namespace} or next;
         $uri = $voc->{namespace} . uri_escape($id);
     }
