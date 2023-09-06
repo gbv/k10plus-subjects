@@ -62,3 +62,8 @@ See <https://coli-conc.gbv.de/occurrences/> for an API that makes use of this da
 
 ![](model.svg)
 
+
+## Changes
+
+2022-03-31:
+ - RDF Dump includes skos:inScheme statements
