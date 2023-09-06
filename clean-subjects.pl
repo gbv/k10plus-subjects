@@ -8,7 +8,7 @@ binmode( STDOUT, ":encoding(utf8)" );
 
 # notation patterns for validation
 my %patterns =
-  map  { $_->{VOC} => qr{^$_->{notationPattern}$} }
+  map  { $_->{VOC} => qr{^($_->{notationPattern})$} }
   grep { $_->{notationPattern} }
   @{ decode_json do { local ( @ARGV, $/ ) = 'vocabularies.json'; <> }
   };
