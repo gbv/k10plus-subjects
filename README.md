@@ -56,7 +56,7 @@ The data can also be used to detect cataloging errors such as invalid notations 
 
 Normalized subject indexing data in TSV only contains column 1-3, limited to syntactically valid notations of selected vocabularies (see `vocabularies.json`).
 
-See <https://coli-conc.gbv.de/occurrences/> for an API that makes use of this data.
+See <https://coli-conc.gbv.de/subjects/> for an API that makes use of this data.
 
 ## Model
 
