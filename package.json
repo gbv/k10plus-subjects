@@ -1,8 +1,10 @@
 {
   "scripts": {
-    "mmdc": "mmdc"
+    "mmdc": "mmdc",
+    "guess-notation": "node ./guess-notation.js"
   },
   "dependencies": {
-    "@mermaid-js/mermaid-cli": "^9.1.7"
+    "@mermaid-js/mermaid-cli": "^9.1.7",
+    "jskos-tools": "^1.0.33"
   }
 }
