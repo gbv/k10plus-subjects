@@ -5,6 +5,6 @@
   },
   "dependencies": {
     "@mermaid-js/mermaid-cli": "^9.1.7",
-    "jskos-tools": "^1.0.33"
+    "jskos-tools": "^1.0.34"
   }
 }
