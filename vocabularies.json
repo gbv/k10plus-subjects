@@ -144,5 +144,31 @@
     "notationPattern": "(LD,)?[A-Z]([A-Z]( [0-9]+([a-z]|\\.[0-9]+)?( [A-Z][0-9]*)?)?)?( - [A-Z]([A-Z]( [0-9]+([a-z]|\\.[0-9]+)?( [A-Z][0-9]*)?)?)?)?",
     "prefLabel": { "de": "Regensburger Verbundklassifikation", "en": "Regensburger Association Classification" },
     "uri": "http://bartoc.org/en/node/533"
+  },
+  {
+    "ID": "^a(.+)",
+    "PICA": "045N",
+    "SRC": "^A(.+)",
+    "VOC": "fivr",
+    "identifier": [
+      "https://uri.gbv.de/terminology/fivr/"
+    ],
+    "namespace": "https://uri.gbv.de/terminology/fivr/",
+    "notationPattern": "R[A-Z]([0-9][0-9](\\.[0-9][0-9])?)?",
+    "prefLabel": { "de": "FIV-Regionalklassifikation" },
+    "uri": "http://bartoc.org/en/node/20447"
+  },
+  {
+    "ID": "^a(.+)",
+    "PICA": "045N/01",
+    "SRC": "^A(.+)",
+    "VOC": "fivr",
+    "identifier": [
+      "https://uri.gbv.de/terminology/fivs/"
+    ],
+    "namespace": "https://uri.gbv.de/terminology/fivs/",
+    "notationPattern": "S[A-Z]([0-9][0-9](\\.[0-9][0-9])?)?",
+    "prefLabel": { "de": "FIV-Sachklassifikation" },
+    "uri": "http://bartoc.org/en/node/20446"
   }
 ]
