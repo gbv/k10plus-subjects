@@ -162,7 +162,7 @@
     "ID": "^a(.+)",
     "PICA": "045N/01",
     "SRC": "^A(.+)",
-    "VOC": "fivr",
+    "VOC": "fivs",
     "identifier": [
       "https://uri.gbv.de/terminology/fivs/"
     ],
